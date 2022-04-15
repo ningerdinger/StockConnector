@@ -16,7 +16,7 @@ class Connector:
     def __init__(self, url):
         self.url = url
         # load the key from the enviroment variables
-        api_key = os.environ['API_EOD']
+        api_key = os.environ['API_demo']
 
         # Create the instance 
         client = EodHistoricalData(api_key)
@@ -32,4 +32,7 @@ class Connector:
         get_short_interest = client.get_short_interest(symbol, to='2021-07-04')
         # Fundamental data for the stock
         resp = client.get_fundamental_equity(symbol, filter_='Financials::Balance_Sheet::quarterly') # Stock - check
+        print(stock_prices)
+        print(get_short_interest)
+        print(resp)
 

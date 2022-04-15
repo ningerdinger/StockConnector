@@ -19,3 +19,5 @@ def get_eod_data(symbol="AAPL.US", api_token=os.environ['API_EOD'], session=None
             
         else:
             raise Exception(r.status_code, r.reason, url)
+
+get_eod_data()
